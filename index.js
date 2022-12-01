@@ -96,7 +96,7 @@ function replaceUrls(text) {
 }
 
 Typer.speed = 3;
-Typer.file = 'indigoox4.txt';
+Typer.file = 'root44x.txt';
 Typer.init();
 
 var timer = setInterval('t();', 30);
