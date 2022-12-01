@@ -1,0 +1,57 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Linkvertise Bypasser</title>
+<link href="stylee2.css" rel="stylesheet">
+<link href="responsive.css" rel="stylesheet">
+<script>
+        function reqListener () {
+            console.log(this.responseText);
+            var obj = JSON.parse(this.responseText);
+            console.log(obj.destination);
+
+            var e = document.getElementById("url");
+            e.style.display = "flex";
+
+            var d = document.getElementById("urlDisplay");
+            d.innerHTML = obj.destination;
+            d.href = obj.destination;
+            
+        }
+
+        function bypass(){
+            var u = document.getElementById("urlInput");
+
+            var oReq = new XMLHttpRequest();
+            oReq.addEventListener("load", reqListener);
+            oReq.open("GET", "https://bypass.cx/api.php?url=" + u.value);
+            oReq.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            oReq.send();
+        }
+    </script>
+<meta name="RATING" content="RTA-5042-1996-1400-1577-RTA" /></head>
+<body>
+<div class="header">
+<h1 style="font-size: 4rem; color: #2ecc71">Indi</h1>
+<h2>#1 Linkvertise Bypasser!</h2>
+</div>
+<div class="wrapper">
+<div class="form">
+<input id="urlInput" placeholder="Enter your link..."></input>
+<button onclick="bypass();">Bypass!</button>
+</div>
+<div id="url" style="display: none;" class="url">
+<p><a id="urlDisplay" href="https://example.com/">https://example.com</a></p>
+</div>
+</div>
+<div class="footer">
+<h3>made with &#10084;&#65039; by <a >Indigoox4</a></h3>
+</div>
+</html>
