@@ -1,0 +1,46 @@
+body{
+	background: #ffffff;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar a {
+    font-weight: 800;
+}
+
+.card{
+	width:100%;
+	max-width: 500px;
+    margin: 0 auto;
+    float: none;
+    border:2px solid #343a40!important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.card-title {
+    font-size: 20px;
+     font-weight: 800;
+}
+
+.form-control:focus {
+    color: #209b97;
+    background-color: #fff;
+    border-color: #343a40;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(216,217,219,.5);
+}
